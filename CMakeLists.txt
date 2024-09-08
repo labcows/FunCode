@@ -3,4 +3,5 @@ project(FunCode)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(FunCode main.cpp)
+add_executable(FunCode main.cpp
+        baekjoon/n_2557.cpp)
