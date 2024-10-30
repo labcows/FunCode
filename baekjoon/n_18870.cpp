@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <set>
-#include <algorithm>
+#include <map>
 
 int main(void)
 {
@@ -23,8 +23,13 @@ int main(void)
         s1.insert(num);
     }
 
-    for (auto& v : v1)
-        std::cout << std::distance(s1.begin(), s1.find(v)) << " ";
+    std::map<int32_t, int32_t> m1;
+    int32_t index = 0;
+    for (int32_t n : s1)
+        m1[n] = index++;
+
+    for (int32_t n : v1)
+        std::cout << m1[n] << " ";
 
     return 0;
 }
